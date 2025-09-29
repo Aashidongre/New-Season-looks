@@ -1,0 +1,550 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #897e93;  /* sirf outer border ke liye */
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.container {
+  background: #fff;   /* white background andar ke content ke liye */
+  max-width: 1200px;
+  margin: 80px auto;  /* center karne ke liye */
+  box-shadow: 0 0 40px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* Navigation */
+.nav-bar {
+ display: flex; /* flex lagao taki elements line me aayein */
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 32px;
+  position: absolute;   /* 👈 nav ko hero ke upar overlay karne ke liye */
+  top: 30px;
+  left: 0;
+  width: 100%;
+  background: transparent; /* 👈 background hata do */
+  z-index: 10; /* image aur text ke upar aaye */
+  margin-top:30px;
+ padding:30px 0;
+}
+/* Material Icons fix */
+.material-icons-outlined {
+  font-size: 20px;
+  color: #5b3f61;
+  cursor: pointer;
+}
+
+/* Menu button */
+.custom-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left:100px;
+}
+
+.custom-menu span {
+  display: block;
+  height: 2px;
+  background: #e84f88;
+  border-radius: 2px;
+}
+
+/* Top aur bottom full */
+.custom-menu span:nth-child(1),
+.custom-menu span:nth-child(3) {
+  width: 20px;
+}
+
+/* Middle thoda chhota */
+.custom-menu span:nth-child(2) {
+  width: 12px;
+  
+}
+
+
+
+/* Center menu items */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin-right:400px;  
+  padding:10px 20px;
+  font-size: 13px;
+   font-family: 'Karla', sans-serif;
+   font-weight:700;
+  color: #654a6a;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+
+/* Right side nav */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  color: #5b3f61;
+  font-weight: 600;
+  margin-right:100px;
+   font-family: 'Karla', sans-serif;
+ 
+}
+
+/* Search form */
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 2px; /* thoda gap search icon aur input ke beech */
+   font-family: 'Karla', sans-serif;
+}
+
+.search-form input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+   font-family: 'Karla', sans-serif;
+  padding: 2px 2px;
+}
+.search-icon {
+  transform: scaleX(-1); /* flip horizontally */
+}
+
+
+/* Avatar small round */
+.nav-avatar img {
+  width: 32px;
+  height: 32px;
+ 
+  object-fit: cover;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 760px; /* full screen hero */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Hero arrows */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: #bda6c2;                  /* Muted arrow (use actual color eyedropped from image if you wish) */
+  cursor: pointer;
+  user-select: none;
+  z-index: 3;
+  background: transparent;          /* Remove white bg for a minimal look */
+  border: none;                     /* No border for a clean look */
+  padding: 6px 12px;                /* Smaller clickable area for subtlety */
+  box-shadow: none;                 /* Remove shadow for flat look */
+  transition: color 0.2s;           /* Only color transitions on hover */
+}
+
+.hero-arrow:hover {
+  color: #e84f88;                   /* Accent hover color to match overall theme */
+  background: transparent;          /* No background change on hover */
+}
+
+/* Left & Right specific */
+.hero-arrow.left {
+  left: 4%;
+}
+
+.hero-arrow.right {
+  right: 4%;
+}
+
+
+
+/* Hero content row */
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+/* Left text */
+.hero-text {
+  position: absolute;
+  left: 18%;
+  top: 54%;
+  transform: translateY(-50%);
+  text-align: left;
+  z-index: 2;
+  line-height: 0.8;   /* tight spacing */
+  
+}
+
+.hero-text span {
+  display: block;
+  margin: 0;          /* remove extra margin */
+  padding: 0;
+}
+
+.hero-text .new {
+  font-size: 110px;
+  color: #e84f88;
+  font-weight: 100;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;  /* thoda sa gap */
+}
+
+.hero-text .season {
+  font-size: 110px;
+  color: #e84f88;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800; 
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.hero-text .looks {
+  font-size: 110px;
+  color: #6db3d3;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+/* Right model */
+.hero-model {
+   position: relative;
+  height: 800px;
+  width: 100%S;
+  z-index: 1;
+}
+
+
+/* Seasons Tabs */
+.season-tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   
+  border-bottom: 1px solid #ececec;
+  height: 300px;
+}
+.tab {
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: flex-end;   /* text ko bottom me le aayega */
+  padding-bottom: 20px;    /* thoda gap neeche dene ke liye */
+  font-size: 32px;
+  font-family: 'Karla', sans-serif;
+}
+
+.season-tabs .tab {
+  flex: 1;
+  
+  font-size: 40px;
+  
+  color: #bababa;
+  letter-spacing: 2px;
+  transition: color 0.2s, font-weight 0.2s;
+  padding: 28px 30px;
+}
+.season-tabs .tab.spring{
+	width:200px;
+  height:250px;
+  background:#ecf3e8;
+  color:#ae9fa8;
+  font-weight: 200;
+  flex:1.5;
+}
+.season-tabs .tab.summer.active {
+  color: #ea6f9a;
+  font-weight: 700;
+  background:#f1e5e5;
+  width:200px;
+  height:250px;
+ 
+}
+.season-tabs .tab.autumn{
+	width:200px;
+  height:250px;
+  background:#f6f3e6;
+}
+.season-tabs .tab.winter{
+	width:250px;
+  height:250px;
+  background:#ecf4f5;
+  flex:1.5;
+}
+
+/* Product Grid */
+.product-grid {
+  background: #fff;
+  padding-bottom:40PX;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 130px;
+   align-items: flex-start;
+}
+.side-products {
+	margin-top:40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 120px;
+  
+}
+.side-products img {
+
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+   margin-left:50px;
+  /*box-shadow: 0 2px 8px rgba(150,150,150,0.10);*/
+}
+.main-products {
+  display: flex;
+  padding-bottom:10PX;
+  justify-content:center;
+ 
+ margin-top:35px;
+  margin-left:70px;
+}
+.main-products img {
+  width: 370px;
+  height: 620px;
+  object-fit: cover;
+  
+  
+  /*box-shadow: 0 2px 8px rgba(150,150,150,0.12);*/
+}
+.products{
+	 background: #fff; 
+}
+.product-rows {
+  display: flex;
+  
+  
+  flex-direction: row;
+  align-items: flex-start;
+  
+}
+.product-row1 {
+  display: flex;
+padding-bottom:20PX;
+  justify-content: center;
+  gap: 15px;
+  margin-left:70px;
+}
+.row1_img{
+  width: 190px;
+  height: 300px;
+  
+  
+}
+.product.special img {
+  background: #faf7f7;
+   width: 220px;
+  height: 250px;
+  gap: 15px;
+  object-fit: cover;
+ 
+}
+
+.product.special {
+  position: relative;
+  background: #faf7f7;
+  width: 190px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+.view{
+	background:none;
+	color:#fff;
+	border: 1px white;
+}
+.product.special .info {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  background: rgba(255,255,255,0.80);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.item-name { font-weight: 700; }
+.item-sizes { color: #b5b6cf; }
+.item-price { color: #ea6f9a; font-weight: 700; }
+
+.load-more {
+  margin: 10px auto 0 auto;
+  display: block;
+  background:#f4f0f0 ;
+  width:1100px;
+  height:80px;
+  border: none;
+  color: #f1aac4;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+/* Trends Section */
+.trend-section {
+  display: flex;
+  max-width: 1100px;
+  margin: 80px auto;
+  background: #f9f7f7;
+  margin-top: 32px;
+  padding: 32px;
+  align-items: center;
+}
+.trend-img {
+  width: 400px;
+  height: 410px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(150,150,150,0.10);
+}
+.trend-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.trend-title {
+  font-size: 28px;
+  color: #b5b6cf;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.trend-title .pink {
+  color: #ea6f9a;
+  font-weight: 700;
+  font-size: 28px;
+}
+.trend-title .year {
+  font-size: 44px;
+  color: #e7cdd7;
+  font-weight: 400;
+}
+.trend-desc {
+  color: #bababa;
+  font-size: 15px;
+  line-height: 1.55;
+}
+.trend-more {
+  background: #ea6f9a;
+  color: #fff;
+  border: none;
+  padding: 8px 32px;
+  font-size: 16px;
+  border-radius: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+/* Partners */
+.partners {
+  display: flex;
+  max-width: 1200px;
+  
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #ffffff;
+  padding: 2px 0;
+ 
+}
+.partners img {
+  max-height: 46px;
+  opacity: 0.6;
+  filter: grayscale(100%);
+}
+
+/* Footer */
+footer {
+  background: #f6f0f3; 
+max-width: 1200px;
+  margin: 10px auto;  /* template jaisa footer */
+  padding: 24px 32px;
+ 
+  flex-direction: column;
+ 
+}
+.footer-menu {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  color: #bababa;
+  align-items: center;
+}
+.copyright {
+  margin-left: auto;
+  font-size: 11px;
+}
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 15px;
+  color: #bababa;
+}
+.footer-social .icon {
+  background: none;
+  color: #bababa;
+  margin-right: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.footer-subscribe {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #ececec;
+}
+.footer-subscribe input {
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #bababa;
+  background: none;
+  width: 170px;
+}
+.footer-subscribe button {
+  background: #ea6f9a;
+  color: #fff;
+  border: none;
+  padding: 8px 24px 8px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 0 18px 18px 0;
+}
